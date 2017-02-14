@@ -51,7 +51,7 @@ function OnPlayAllMovies(scriptCmdData) {
 	// Determine verbosity level.
 	// 1 - Print informative log.
 	// 0 - Print nothing.
-	var verbose = 1;
+	var verbose = 0;
 	// --------------------
 	// Clear output?
 	var clearOutput = false;
@@ -63,12 +63,13 @@ function OnPlayAllMovies(scriptCmdData) {
 	}
 	
 	// Check that there is an appropriate number of files selected.
-	if (scriptCmdData.func.sourcetab.selected_files.count == 0) {
+	var selFilesCount = scriptCmdData.func.sourcetab.selected_files.count;
+	if (selFilesCount == 0) {
 		print("No files are selected.");
-	} else if (scriptCmdData.func.sourcetab.selected_files.count > 1) {
+	} else if (selFilesCount > 1) {
 		print("Too many files are selected.");
 	} else {
-		// Prepare temporary variables.
+		// -------------------- Prepare temporary variables.
 		
 		// Arrays to store items.
 		var firstHalf = [];
@@ -77,7 +78,8 @@ function OnPlayAllMovies(scriptCmdData) {
 		// Flag used to define the position of the files on the playlist.
 		var addToFirstHalf = false;
 		
-		// Filter selected files to consider only movie files.
+		// -------------------- Filter selected files to consider only movie files.
+		
 		for (var eSel = new Enumerator(scriptCmdData.func.sourcetab.files); !eSel.atEnd(); eSel.moveNext())
 		{
 			var availableFile = eSel.item();
@@ -101,6 +103,8 @@ function OnPlayAllMovies(scriptCmdData) {
 			}
 		}
 		
+		// -------------------- Prepare playlist.
+		
 		// Begin playlist.
 		var fso = new ActiveXObject("Scripting.FileSystemObject");
 		var playlist = fso.CreateTextFile(playlistPath, true, true);
@@ -116,7 +120,8 @@ function OnPlayAllMovies(scriptCmdData) {
 		// End playlist.
 		playlist.Close();
 		
-		// Execute playlist.
+		// -------------------- Execute playlist.
+		
 		// Define player to use.
 		if (useSpecifiedPlayer == false || playerOpenCommand == "") {
 			// Query registry to get the path to the default video player.
