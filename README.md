@@ -1,6 +1,6 @@
 **Name:** Play All Movies
 **Type:** user defined command via script.
-**Function:** adds all movie files on current view to a playlist and open it.
+**Function:** adds all movie files on current view to a playlist and opens it.
 **License:** CC0 Public Domain by AndersonNNunes.org.
 
 **Purpose**
@@ -16,6 +16,10 @@
 **Functionality**
 
 The scripts adds the new command ```PlayAllMovies```.
+
+**Install**
+
+It is distributed as a .js file. Install it by the usual means.
 
 **Usage**
 
@@ -35,4 +39,4 @@ You have some options to personalize the script's behavior. Right now you need t
 
 **Follow**
 
-Follow the development of this script at the [Directory Opus Forum](https://resource.dopus.com/t/play-all-movies-generate-and-open-playlist-for-current-tab/24933) or on [Github](https://github.com/andersonnnunes/PlayAllMovies).
+Follow the development of this script at the [Directory Opus Forum](https://resource.dopus.com/t/play-all-movies-generate-and-open-playlist-for-current-tab/24933) or on [GitHub](https://github.com/andersonnnunes/PlayAllMovies).
