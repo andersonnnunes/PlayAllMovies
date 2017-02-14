@@ -6,7 +6,7 @@ function OnInit(initData) {
 	initData.copyright = "CC0 Public Domain by AndersonNNunes.org";
 	var version = "0.1";
 	initData.version = version;
-	initData.url = "";
+	initData.url = "https://github.com/andersonnnunes/PlayAllMovies";
 	initData.default_enable = true;
 
 	// Create a new ScriptCommand object and initialize it to add the command to Opus.
