@@ -1,8 +1,6 @@
 **Name:** Play All Movies
 
-**Type:** user defined command via script.
-
-**Function:** adds all movie files on current view to a playlist and opens it.
+**Type:** Script for Directory Opus to define a new command: PlayAllMovies.
 
 **License:** CC0 Public Domain by AndersonNNunes.org.
 
@@ -22,27 +20,29 @@
 
 The scripts adds the new command ```PlayAllMovies```.
 
-**Install**
-
-It is distributed as a .js file. Install it by the usual means.
-
-**Usage**
-
-Set the command ```PlayAllMovies``` as an action triggered by whatever event you desire. I choose to have it for the 'dblclk' action (File Type > Movies > Events > Left double-click).
-
-One file needs to be selected for the command to work.
-
 **Requeriments**
+
+Directory Opus version >= ???.
 
 Any video player with support for .m3u playlists registered as the default program for the movie files you want to play. The player does not need to be registered as default for .m3u playlists, it only needs to be able to read them.
 
 (Tested with Media Player Classic on Windows 10.)
+
+**Install**
+
+It is distributed as a .js file. Install it by the usual means.
 
 **Settings**
 
 There should not be the need for you too change anything before executing the script.
 
 You have some options to personalize the script's behavior. Right now you need to edit the script manually.
+
+**Usage**
+
+Set the command ```PlayAllMovies``` as an action triggered by whatever event you desire. I choose to have it for the 'dblclk' action (File Type > Movies > Events > Left double-click).
+
+One file needs to be selected for the command to work.
 
 **Follow**
 
