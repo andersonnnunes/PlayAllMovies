@@ -20,7 +20,7 @@
 
 The scripts adds the new command ```PlayAllMovies```.
 
-**Requeriments**
+**Requirements**
 
 Directory Opus version >= ???.
 
