@@ -39,7 +39,7 @@ function OnPlayAllMovies(scriptCmdData) {
 	// Use specified player?
 	var useSpecifiedPlayer = false;
 	// --------------------
-	// Path to specified player.
+	// Command to open specified player.
 	var playerOpenCommand = ""
 	// --------------------
 	// Name of file type group for movies.
