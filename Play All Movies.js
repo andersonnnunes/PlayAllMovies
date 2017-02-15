@@ -32,8 +32,6 @@ function OnInit(initData) {
 function OnPlayAllMovies(scriptCmdData) {
 	// Prepare objects.
 	var wsh = new ActiveXObject("WScript.Shell");
-	var cmd = scriptCmdData.func.command;
-	
 	// ------------------------------- Preferences
 	// Path to temporary playlist (will be overwritten).
 	var playlistPath = wsh.ExpandEnvironmentStrings("%TEMP%") + "\\" + "PlayAllMovies.m3u";
@@ -78,7 +76,7 @@ function OnPlayAllMovies(scriptCmdData) {
 		// Flag used to define the position of the files on the playlist.
 		var addToFirstHalf = false;
 		
-		// -------------------- Filter selected files to consider only movie files.
+		// -------------------- Filter files to consider only movie files.
 		
 		for (var eSel = new Enumerator(scriptCmdData.func.sourcetab.files); !eSel.atEnd(); eSel.moveNext())
 		{
@@ -89,7 +87,7 @@ function OnPlayAllMovies(scriptCmdData) {
 					// Define the position of the file on the playlist.
 					if (addToFirstHalf == false && availableFile.selected == true) {
 						addToFirstHalf = true;
-						// Save extension of the selected file, it may be needed later.
+						// Save extension of the first selected file, it may be needed later.
 						var movieExtension = availableFile.ext;
 					}
 					
