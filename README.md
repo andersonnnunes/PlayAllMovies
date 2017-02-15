@@ -1,7 +1,12 @@
 **Name:** Play All Movies
+
 **Type:** user defined command via script.
+
 **Function:** adds all movie files on current view to a playlist and opens it.
+
 **License:** CC0 Public Domain by AndersonNNunes.org.
+
+------
 
 **Purpose**
 
@@ -24,6 +29,8 @@ It is distributed as a .js file. Install it by the usual means.
 **Usage**
 
 Set the command ```PlayAllMovies``` as an action triggered by whatever event you desire. I choose to have it for the 'dblclk' action (File Type > Movies > Events > Left double-click).
+
+One file needs to be selected for the command to work.
 
 **Requeriments**
 
