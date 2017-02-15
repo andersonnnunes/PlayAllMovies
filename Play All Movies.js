@@ -51,7 +51,7 @@ function OnPlayAllMovies(scriptCmdData) {
 	// 0 - Print nothing.
 	var verbose = 0;
 	// --------------------
-	// Clear output?
+	// Clear output on run?
 	var clearOutput = false;
 	// --------------------
 	
@@ -63,9 +63,9 @@ function OnPlayAllMovies(scriptCmdData) {
 	// Check that there is an appropriate number of files selected.
 	var selFilesCount = scriptCmdData.func.sourcetab.selected_files.count;
 	if (selFilesCount == 0) {
-		print("No files are selected.");
+		error("No files are selected.");
 	} else if (selFilesCount > 1) {
-		print("Too many files are selected.");
+		error("Too many files are selected.");
 	} else {
 		// -------------------- Prepare temporary variables.
 		
@@ -135,9 +135,14 @@ function OnPlayAllMovies(scriptCmdData) {
 	}
 	
 	// Print only if requested.
-	function print(text){
+	function print(text) {
 		if (verbose) {
 			DOpus.Output(text);
 		}
+	}
+	
+	// Display error message.
+	function error(text) {
+		DOpus.Output(text, true);
 	}
 }
