@@ -1,6 +1,6 @@
 **Name:** Play All Movies
 
-**Type:** Script for Directory Opus to define a new command: PlayAllMovies.
+**Type:** Script for Directory Opus to define the new command ```PlayAllMovies```.
 
 **License:** CC0 Public Domain by AndersonNNunes.org.
 
@@ -36,7 +36,9 @@ It is distributed as a .js file. Install it by the usual means.
 
 There should not be the need for you too change anything before executing the script.
 
-You have some options to personalize the script's behavior. Right now you need to edit the script manually.
+You have the option to set a specific player to be used with this command, in case you are using Opus as a portable program and/or if there is not a default player on the system.
+
+Use the configuration window to change the script's behavior.
 
 **Usage**
 
